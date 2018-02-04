@@ -1,0 +1,10 @@
+<div class="solid-box" ng-click="$ctrl.playAudio()">
+  <span class="box-text symbol black">&#9658;</span>
+</div>
+<audio class="player" id="audio-{{$ctrl.file.lastModified}}"></audio>
+<span style="float:left; padding-top: 8px">{{$ctrl.index+1}}) {{$ctrl.file.name | limitTo: 7}}{{$ctrl.file.name.length > 7 ? '...' : ''}}</span>
+<div style="float:right">
+  <remove-audio file="$ctrl.file"></remove-audio>
+  <repeat-audio file="$ctrl.file"></repeat-audio>
+  <priority-audio file="$ctrl.file"></priority-audio>
+</div>

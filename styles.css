@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: lightyellow;
+}
+
+.box {
+  display: inline-block; 
+  vertical-align: top;
+  margin: 10px 10px 10px 10px;
+}
+
+.dashed-box {
+  border: dotted 5px grey;
+  width: 150px;
+  height: 150px;
+}
+
+.dashed-box:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.solid-box {
+  border: solid 5px black;
+  width: 150px;
+  height: 150px;
+}
+
+
+.solid-box:hover {
+  background: lightgrey;
+  cursor: pointer;
+}
+
+.solid-rectangle {
+  border: solid 5px black;
+  width: 200px;
+  height: 100px;
+}
+
+.solid-rectangle:hover {
+  cursor: pointer;
+}
+
+.solid-rectangle.coral {
+  background: coral;
+}
+
+.solid-rectangle.coral:hover {
+  background: lightcoral;
+}
+
+.solid-rectangle.cyan {
+  background: cyan;
+}
+
+.solid-rectangle.cyan:hover {
+  background: lightcyan;
+}
+
+.solid-rectangle.seagreen {
+  background: seagreen;
+}
+
+.solid-rectangle.seagreen:hover {
+  background: darkseagreen;
+}
+
+.solid-rectangle.gold {
+  background: gold;
+}
+
+.solid-rectangle.swap-inject-box {
+  cursor: default;
+}
+
+.box-text {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.swap-inject {
+  padding-left: 15px;
+}
+
+.box-text.symbol {
+  font-size: 50px;
+}
+
+.box-text.words {
+  font-size: 20px;
+}
+
+.grey {
+  color: grey;
+}
+
+.black {
+  color: #000000;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.orange {
+  color: darkorange;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Soundbored</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src="./bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+    <script type="text/javascript" src="./scripts/menu.js"></script>
+    <script type="text/javascript" src="./scripts/services/audio-file-service/audio-file-service.js"></script>
+    <script type="text/javascript" src="./scripts/directives/file-change.js"></script>
+    <script type="text/javascript" src="./scripts/directives/multi-file-change.js"></script>
+    <script type="text/javascript" src="./scripts/components/audio-box/audio-box.js"></script>
+    <script type="text/javascript" src="./scripts/components/new-audio-box/new-audio-box.js"></script>
+    <script type="text/javascript" src="./scripts/components/remove-audio/remove-audio.js"></script>
+    <script type="text/javascript" src="./scripts/components/repeat-audio/repeat-audio.js"></script>
+    <script type="text/javascript" src="./scripts/components/priority-audio/priority-audio.js"></script>
+  </head>
+  <body ng-app="app" ng-controller="mainController">
+      Audio count: {{files.length}}
+      <br>
+      <div class="box" ng-repeat="file in files" style="display: inline-block; vertical-align: top;">
+        <audio-box file="file" index="$index"></audio-box>
+      </div>
+      <div class="box">
+        <new-audio-box></new-audio-box>
+      </div>
+      <br>
+      <div class="box solid-rectangle seagreen" ng-click="clearFiles()">
+        <span class="box-text words">Clear files</span>
+      </div>
+      <div class="box solid-rectangle coral" ng-click="stopAllAudio()">
+        <span class="box-text words">Stop all</span>
+      </div>
+      <div class="box solid-rectangle cyan" ng-click="showMultiFile()">
+        <span class="box-text words">Multi Import</span>
+      </div>
+      <input id="multifile" type="file" multiple multi-file-change ng-model="importFiles" style="display: none">
+      <div class="box solid-rectangle gold swap-inject-box">
+        <div class="box-text swap-inject">
+          <input type="text" id="val1" placeholder="swap1/to inject">
+          <input type="text" id="val2" placeholder="swap2/inject after">
+          <br>
+          <button ng-click="swap()">Swap (1 &#8660; 2)</button><button ng-click="inject()">Inject (1 &#8627; 2)</button>
+        </div>
+      </div>
+  </body>
+</html>

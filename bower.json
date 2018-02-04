@@ -1,0 +1,19 @@
+{
+  "name": "soundbored",
+  "description": "",
+  "main": "main.js",
+  "authors": [
+    "tugs <tugs@bjork-bjork.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
